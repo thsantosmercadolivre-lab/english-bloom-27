@@ -445,7 +445,14 @@ section.light .bonus-art:after{background:rgba(75,42,107,.18)}
 .hero-orbit .orbit-hello{color:#ffd3ea;left:-20px}
 .hero-orbit .bloom{position:absolute;right:-10px;bottom:10%;width:100px;z-index:3}
 .hero-orbit .float-card{right:-10px;top:4%}
-#como-funciona .hero-visual{justify-self:center}
+#como-funciona .steps-wrap{grid-template-columns:.8fr 1.2fr;gap:50px}
+#como-funciona .hero-visual{justify-self:start;width:min(700px,108%)}
+#como-funciona .ui{grid-template-rows:34px 1fr 38px;gap:8px;padding:12px}
+#como-funciona .ui-top{font-size:12px}
+#como-funciona .ui-chat span{font-size:12px;padding:6px 12px}
+#como-funciona .ui-main .board{font-size:20px}
+#como-funciona .ui-side div{font-size:17px}
+@media (max-width:900px){#como-funciona .steps-wrap{grid-template-columns:1fr}#como-funciona .hero-visual{width:100%;justify-self:center}#como-funciona .ui{grid-template-rows:26px 1fr 30px;padding:8px}#como-funciona .ui-top,#como-funciona .ui-chat span{font-size:9px}}
 #como-funciona .hero-visual .hello{color:#d63c86;text-shadow:none}
 @media (max-width:900px){.hero-orbit{width:min(340px,86%);margin:40px auto 30px}}
 /* Reveal */
