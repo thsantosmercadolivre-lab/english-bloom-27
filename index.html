@@ -445,6 +445,15 @@ section.light .bonus-art:after{background:rgba(75,42,107,.18)}
 .hero-orbit .orbit-hello{color:#ffd3ea;left:-20px}
 .hero-orbit .bloom{position:absolute;right:-10px;bottom:10%;width:100px;z-index:3}
 .hero-orbit .float-card{right:-10px;top:4%}
+/* recortes enviados pela Ludmilla */
+.hero-orbit .disc{position:absolute;inset:14%;border-radius:50%;background:radial-gradient(circle at 50% 40%,rgba(240,80,154,.55),rgba(123,63,209,.35) 60%,transparent 72%)}
+.hero-orbit .cut{position:absolute;left:50%;bottom:6%;height:112%;max-width:none;transform:translateX(-50%);z-index:2;filter:drop-shadow(0 30px 40px rgba(0,0,0,.45))}
+.hero-orbit .tag-name{bottom:-2%}
+.hero-orbit .orbit-hello{top:2%;left:-40px}
+.bonus-art{width:300px}
+.bonus-art img{filter:drop-shadow(0 24px 30px rgba(75,42,107,.25))}
+.close-logo{display:block;width:120px;margin:0 auto 18px;opacity:.95;animation:bob 6s ease-in-out infinite}
+@media (max-width:900px){.hero-orbit{margin-top:70px}.bonus-art{width:220px;margin:0 auto}}
 #como-funciona .steps-wrap{grid-template-columns:.8fr 1.2fr;gap:50px}
 #como-funciona .hero-visual{justify-self:start;width:min(700px,108%)}
 #como-funciona .ui{grid-template-rows:34px 1fr 38px;gap:8px;padding:12px}
@@ -514,7 +523,7 @@ section.light .bonus-art:after{background:rgba(75,42,107,.18)}
 <div class="spot" aria-hidden="true"></div>
 <header class="hero">
   <div class="bgimg" aria-hidden="true"></div>
-  <div class="blob" aria-hidden="true"><img src="assets/milla.jpg" alt=""></div>
+  <div class="blob" aria-hidden="true"></div>
   <canvas class="sparks" aria-hidden="true"></canvas>
   <div class="float-words" aria-hidden="true">
     <span style="left:4%;top:78%;font-size:30px;--r:-6deg">How are you?</span>
@@ -544,7 +553,8 @@ section.light .bonus-art:after{background:rgba(75,42,107,.18)}
 
       <div class="orbit hero-orbit rv">
         <div class="o o2"><i></i></div><div class="o o1"><i></i></div>
-        <div class="ph"><img src="assets/milla.jpg" alt="Teacher Milla Saso"></div>
+        <div class="disc" aria-hidden="true"></div>
+        <img class="cut" src="assets/milla-polvo.webp" alt="Teacher Milla Saso sentada numa pilha de livros, olhando o celular">
         <div class="hello hand orbit-hello">Hello,<br>guys!</div>
         <svg class="bloom" viewBox="0 0 100 100" aria-hidden="true"><g fill="#b89ad8">
           <ellipse cx="50" cy="22" rx="10" ry="24"/><ellipse cx="50" cy="78" rx="10" ry="24"/>
@@ -717,7 +727,7 @@ section.light .bonus-art:after{background:rgba(75,42,107,.18)}
     </div>
 
     <div class="bonus rv">
-      <div class="bonus-art"><img src="assets/bonus-ink.png" alt="" aria-hidden="true"></div>
+      <div class="bonus-art"><img src="assets/milla-livros.webp" alt="Teacher Milla sentada numa pilha de livros com o celular"></div>
       <div>
         <div class="kicker">Bonus</div>
         <h3>Special In-Person Meetup no fim de 2027</h3>
@@ -796,6 +806,7 @@ section.light .bonus-art:after{background:rgba(75,42,107,.18)}
     </div>
 
     <div class="closing rv">
+      <img class="close-logo" src="assets/logo-ms.png" alt="MS Learnings">
       <span class="hand">Let's bloom together!</span>
       <a class="btn" href="#inscricao">Quero entrar na turma
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
