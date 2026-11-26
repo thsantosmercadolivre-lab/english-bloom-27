@@ -439,6 +439,15 @@ section.light .bonus-art:after{background:rgba(75,42,107,.18)}
 .topbar.over .tb-cd{display:none}
 @media (max-width:600px){.topbar .in{gap:10px;padding:7px 10px}.topbar .msg{font-size:11px;width:100%;justify-content:center}.tb-cd div{min-width:34px}.tb-cd b{font-size:16px}.tb-cta{padding:7px 12px;font-size:11px}}
 
+.hero-orbit{width:min(440px,100%);justify-self:center}
+.hero-orbit .o{border-color:rgba(184,154,216,.4)}
+.hero-orbit .o2{border-color:rgba(240,80,154,.35)}
+.hero-orbit .orbit-hello{color:#ffd3ea;left:-20px}
+.hero-orbit .bloom{position:absolute;right:-10px;bottom:10%;width:100px;z-index:3}
+.hero-orbit .float-card{right:-10px;top:4%}
+#como-funciona .hero-visual{justify-self:center}
+#como-funciona .hero-visual .hello{color:#d63c86;text-shadow:none}
+@media (max-width:900px){.hero-orbit{width:min(340px,86%);margin:40px auto 30px}}
 /* Reveal */
 .rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
 .rv.in{opacity:1;transform:none}
@@ -526,17 +535,10 @@ section.light .bonus-art:after{background:rgba(75,42,107,.18)}
         </div>
       </div>
 
-      <div class="hero-visual portrait rv">
-        <div class="laptop">
-          <div class="screen"><div class="ui">
-            <div class="ui-top"><span class="live">LIVE</span>English Bloom 27 · Live Class</div>
-            <div class="ui-main"><img src="assets/milla.jpg" alt="Teacher Milla dando aula ao vivo"><span class="board">Hello! How are you?</span></div>
-            <div class="ui-side"><div>A</div><div>J</div><div>M</div><div>R</div></div>
-            <div class="ui-chat"><span>Hi, teacher!</span><span>I&#39;m fine, thank you!</span><span>Can you repeat, please?</span></div>
-          </div></div>
-          <div class="base"></div>
-        </div>
-        <div class="hello hand">Hello,<br>guys!</div>
+      <div class="orbit hero-orbit rv">
+        <div class="o o2"><i></i></div><div class="o o1"><i></i></div>
+        <div class="ph"><img src="assets/milla.jpg" alt="Teacher Milla Saso"></div>
+        <div class="hello hand orbit-hello">Hello,<br>guys!</div>
         <svg class="bloom" viewBox="0 0 100 100" aria-hidden="true"><g fill="#b89ad8">
           <ellipse cx="50" cy="22" rx="10" ry="24"/><ellipse cx="50" cy="78" rx="10" ry="24"/>
           <ellipse cx="22" cy="50" rx="24" ry="10"/><ellipse cx="78" cy="50" rx="24" ry="10"/>
@@ -692,10 +694,17 @@ section.light .bonus-art:after{background:rgba(75,42,107,.18)}
         <li><div><h3>Semana 3 · Live Class</h3><p>Conversação, aplicação do tema e correção do que ficou difícil.</p></div></li>
         <li><div><h3>Semana 4 · Review &amp; Practice</h3><p>Revisão, desafio final e aquecimento para o próximo tema.</p></div></li>
       </ol>
-      <div class="orbit rv">
-        <div class="o o2"><i></i></div><div class="o o1"><i></i></div>
-        <div class="ph"><img src="assets/milla.jpg" alt="Teacher Milla Saso"></div>
-        <div class="hello hand orbit-hello">Hello,<br>guys!</div>
+      <div class="hero-visual portrait rv">
+        <div class="laptop">
+          <div class="screen"><div class="ui">
+            <div class="ui-top"><span class="live">LIVE</span>English Bloom 27 · Live Class</div>
+            <div class="ui-main"><img src="assets/milla.jpg" alt="Teacher Milla dando aula ao vivo"><span class="board">Hello! How are you?</span></div>
+            <div class="ui-side"><div>A</div><div>J</div><div>M</div><div>R</div></div>
+            <div class="ui-chat"><span>Hi, teacher!</span><span>I&#39;m fine, thank you!</span><span>Can you repeat, please?</span></div>
+          </div></div>
+          <div class="base"></div>
+        </div>
+        <div class="hello hand">Hello,<br>guys!</div>
         <div class="tag-name">Teacher Milla Saso</div>
       </div>
     </div>
