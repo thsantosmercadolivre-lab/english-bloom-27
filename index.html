@@ -1,0 +1,866 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>English Bloom 27 | Teacher Milla Saso</title>
+<meta name="description" content="Programa anual de inglês para o nível Básico 1 com a Teacher Milla Saso. 24 aulas ao vivo, desafios, comunidade e encontro presencial no fim de 2027. 15 vagas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Oswald:wght@500;600;700&family=Montserrat:wght@400;500;600;700&family=Caveat:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#17141d;          /* grafite arroxeado, base do pin */
+  --bg-2:#1e1a26;
+  --line:rgba(255,255,255,.09);
+  --ink:#f4eef6;
+  --muted:#b3a9bb;
+  --pink:#f0509a;        /* rosa do flyer */
+  --pink-soft:#ffd3ea;
+  --lilac:#b89ad8;       /* lilás do flyer */
+  --violet:#7b3fd1;
+  --grad:linear-gradient(135deg,#f0509a 0%,#c03fd0 55%,#7b3fd1 100%);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:Montserrat,system-ui,sans-serif;font-size:16px;line-height:1.65;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{width:min(1120px,100% - 32px);margin-inline:auto;position:relative}
+
+/* Tipografia */
+.kicker{font-family:Montserrat;font-weight:700;font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--pink)}
+.serif{font-family:Cinzel,serif;font-weight:500;letter-spacing:.04em}
+.cond{font-family:Oswald,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.01em;line-height:1}
+h2.title{font-family:Oswald,sans-serif;font-weight:600;text-transform:uppercase;font-size:clamp(32px,5vw,52px);line-height:1.05;margin:14px 0 18px}
+h2.title em{font-style:normal;color:var(--pink)}
+.lead{color:var(--muted);font-size:17px;max-width:620px}
+.center{text-align:center}.center .lead{margin-inline:auto}
+.hand{font-family:Caveat,cursive;font-weight:700;color:var(--pink-soft)}
+
+/* Botão */
+.btn{display:inline-flex;align-items:center;gap:12px;background:var(--grad);color:#fff;text-decoration:none;font-weight:700;font-size:15px;letter-spacing:.06em;text-transform:uppercase;padding:18px 34px;border-radius:999px;box-shadow:0 12px 40px -10px rgba(240,80,154,.7);transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 18px 50px -10px rgba(240,80,154,.9)}
+.btn svg{width:18px;height:18px}
+
+/* Decorações soltas (x, pontos, meia lua) */
+.deco{position:absolute;pointer-events:none;opacity:.55}
+.x{width:14px;height:14px}
+.x:before,.x:after{content:"";position:absolute;left:50%;top:0;width:2px;height:100%;background:var(--pink);transform:rotate(45deg)}
+.x:after{transform:rotate(-45deg)}
+.dots{width:64px;height:64px;background-image:radial-gradient(rgba(255,255,255,.35) 1.2px,transparent 1.4px);background-size:12px 12px}
+.moon{width:26px;height:26px;border-radius:50%;box-shadow:-5px 4px 0 0 var(--lilac);transform:rotate(-30deg)}
+
+section{position:relative;padding:110px 0}
+section + section{border-top:1px solid var(--line)}
+
+/* ============ 1. HERO ============ */
+.hero{padding:0 0 100px;overflow:hidden}
+.hero:before{ /* blob em degradê do pin, borda suave pra não cortar o texto */
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 70% 85% at 8% 0%,rgba(240,80,154,.95) 0%,rgba(192,63,208,.75) 38%,rgba(123,63,209,.35) 62%,transparent 80%),
+    radial-gradient(circle at 78% 55%,rgba(123,63,209,.28) 0%,transparent 45%)}
+.hero:after{content:"";position:absolute;left:0;right:0;bottom:0;height:160px;background:linear-gradient(transparent,var(--bg))}
+nav{position:relative;z-index:3;display:flex;justify-content:space-between;align-items:center;padding:26px 0}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo b{font-family:Oswald;font-size:30px;letter-spacing:-.02em;color:#fff;line-height:1}
+.logo span{font-family:Oswald;font-weight:500;font-size:12px;letter-spacing:.2em;color:#fff;opacity:.85}
+.nav-cta{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--pink-soft);padding-bottom:3px}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;padding-top:40px}
+.bf{font-family:Cinzel,serif;font-weight:500;font-size:clamp(22px,3vw,34px);letter-spacing:.16em;color:#fff;opacity:.95}
+.hero h1{font-family:Oswald;font-weight:700;text-transform:uppercase;font-size:clamp(56px,9vw,112px);line-height:.92;margin:10px 0 22px;text-shadow:0 0 30px rgba(255,200,230,.35)}
+.hero h1 small{display:block;font-size:.42em;letter-spacing:.06em;font-weight:500;opacity:.92}
+.hero .sub{text-shadow:0 2px 14px rgba(23,20,29,.9);font-size:19px;max-width:520px;color:#fff;opacity:.92;margin-bottom:34px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:34px;margin-top:38px}
+.hero-meta div{border-left:1px solid rgba(255,255,255,.35);padding-left:14px}
+.hero-meta strong{display:block;font-family:Oswald;font-size:26px;font-weight:600;line-height:1.1}
+.hero-meta span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+.portrait{position:relative;justify-self:center;width:min(420px,100%)}
+.ring{position:relative;aspect-ratio:1;border-radius:50%;padding:7px;background:var(--grad);box-shadow:0 30px 80px -20px rgba(123,63,209,.7)}
+.ring .ph{width:100%;height:100%;border-radius:50%;overflow:hidden;position:relative;background:#2a1830}
+.ring .ph img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05)}
+.ring .ph:after{content:"";position:absolute;inset:0;background:linear-gradient(160deg,rgba(240,80,154,.35),rgba(123,63,209,.25));mix-blend-mode:color}
+.hello{position:absolute;left:-30px;top:10%;font-size:44px;line-height:.9;transform:rotate(-12deg);text-shadow:0 2px 0 rgba(0,0,0,.4)}
+.hello i{display:block;width:36px;height:22px;margin:-4px 0 0 120px;border-top:3px solid var(--pink);border-radius:50%;transform:rotate(20deg)}
+.bloom{position:absolute;right:-18px;bottom:6%;width:120px;animation:spin 26s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.tag-name{position:absolute;left:50%;bottom:-18px;transform:translateX(-50%);white-space:nowrap;background:#fff;color:#2a1830;font-weight:700;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:10px 20px;border-radius:999px}
+
+/* ============ 2. O QUE É + INCLUSO ============ */
+.split{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start}
+.bigben{width:100%;max-width:300px;opacity:.9}
+.teacher{margin-top:28px;border-left:2px solid var(--pink);padding-left:18px;color:var(--muted)}
+.teacher b{color:var(--ink)}
+.incl{list-style:none;margin-top:10px}
+.incl li{display:grid;grid-template-columns:46px 1fr;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)}
+.incl li:first-child{border-top:1px solid var(--line)}
+.ic{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:rgba(240,80,154,.12);color:var(--pink)}
+.ic svg{width:22px;height:22px}
+.incl h3{font-size:17px;font-weight:700;margin-bottom:2px}
+.incl p{color:var(--muted);font-size:15px}
+.incl .en{font-family:Caveat;font-size:20px;color:var(--lilac);margin-left:6px;font-weight:700}
+
+/* ============ 3. JORNADA ============ */
+.digits{display:flex;justify-content:center;gap:12px;margin:40px 0 60px;flex-wrap:wrap}
+.digit{font-family:Oswald;font-weight:600;font-size:clamp(40px,6vw,64px);color:var(--pink);text-shadow:0 0 18px rgba(240,80,154,.75);text-align:center;min-width:90px}
+.digit small{display:block;font-family:Montserrat;font-size:11px;letter-spacing:.2em;color:var(--muted);text-shadow:none;margin-top:6px;font-weight:600}
+.digit-sep{font-family:Oswald;font-size:48px;color:var(--lilac);opacity:.5;align-self:flex-start;margin-top:4px}
+.stages{display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:1px solid var(--line)}
+.stage{padding:26px 20px 10px;border-right:1px solid var(--line);position:relative}
+.stage:last-child{border-right:0}
+.stage:before{content:"";position:absolute;top:-5px;left:20px;width:9px;height:9px;border-radius:50%;background:var(--pink);box-shadow:0 0 12px var(--pink)}
+.stage .when{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.stage h3{font-family:Oswald;font-weight:600;font-size:22px;text-transform:uppercase;line-height:1.1;margin:8px 0}
+.stage p{font-size:14px;color:var(--muted)}
+.months{margin-top:70px;display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.month{padding:20px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.month:nth-child(4n){border-right:0}
+.month:nth-last-child(-n+4){border-bottom:0}
+.month span{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--pink);font-weight:700}
+.month b{display:block;font-family:Oswald;font-weight:500;font-size:19px;text-transform:uppercase;margin:4px 0 2px;letter-spacing:.02em}
+.month p{font-size:13px;color:var(--muted);line-height:1.5}
+.note{font-size:13px;color:var(--muted);margin-top:22px;text-align:center;font-style:italic}
+
+/* ============ 4. COMO FUNCIONA + BÔNUS ============ */
+.weeks{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:50px}
+.week .n{font-family:Oswald;font-size:60px;font-weight:700;line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.week h3{font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin:10px 0 6px}
+.week p{color:var(--muted);font-size:15px}
+.bonus{margin-top:90px;display:grid;grid-template-columns:auto 1fr;gap:50px;align-items:center;padding:50px;border-radius:28px;background:linear-gradient(135deg,rgba(240,80,154,.16),rgba(123,63,209,.16));border:1px solid rgba(240,80,154,.35);position:relative;overflow:hidden}
+.bonus .books{width:190px}
+.bonus h3{font-family:Oswald;font-weight:600;text-transform:uppercase;font-size:clamp(28px,4vw,40px);line-height:1.05;margin:10px 0 12px}
+.bonus p{color:#e3d9e8;max-width:560px}
+
+/* ============ 5. INVESTIMENTO ============ */
+.price-box{margin:50px auto 0;max-width:760px;border-radius:28px;background:var(--bg-2);border:1px solid var(--line);overflow:hidden;box-shadow:0 40px 90px -40px rgba(240,80,154,.5)}
+.price-head{background:var(--grad);padding:16px;text-align:center;font-weight:700;font-size:13px;letter-spacing:.2em;text-transform:uppercase}
+.price-body{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.price-l{padding:44px 40px;border-right:1px solid var(--line);text-align:center;display:flex;flex-direction:column;justify-content:center}
+.price-l .from{font-size:13px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+.price-l .val{font-family:Oswald;font-weight:700;font-size:76px;line-height:1;margin:8px 0;color:#fff}
+.price-l .val sup{font-size:.35em;vertical-align:top;margin-right:4px;position:relative;top:.35em}
+.price-l .val small{font-size:.45em}
+.price-l .old{font-size:15px;color:var(--muted);margin-bottom:6px}
+.price-l .old s{color:#ff8ab8;text-decoration-thickness:2px}
+.price-l .off{display:inline-block;margin:6px auto 10px;font-size:12px;font-weight:700;letter-spacing:.14em;color:#fff;background:var(--grad);padding:6px 14px;border-radius:6px;animation:wob 2.6s ease-in-out infinite}
+@keyframes wob{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg) scale(1.04)}}
+.seat-bar{height:6px;border-radius:6px;background:rgba(255,255,255,.08);margin:12px auto 8px;width:80%;overflow:hidden}
+.seat-bar i{display:block;height:100%;width:100%;background:var(--grad);animation:fill 1.6s ease-out both}
+@keyframes fill{from{width:0}}
+.seat-note{font-size:12px;color:var(--muted)}
+.hero-meta s.was{font-size:.6em;color:#ffb3d4;font-weight:500;margin-right:4px}
+.price-l .val sub{font-size:.3em;font-weight:500;color:var(--muted);vertical-align:baseline}
+.price-l .seats{margin-top:18px;font-family:Oswald;font-size:22px;color:var(--pink);letter-spacing:.04em;text-shadow:0 0 14px rgba(240,80,154,.6)}
+.price-r{padding:40px}
+.price-r ul{list-style:none}
+.price-r li{display:flex;gap:12px;padding:9px 0;font-size:15px;border-bottom:1px dashed var(--line)}
+.price-r li:last-child{border-bottom:0}
+.price-r li svg{flex:none;width:18px;height:18px;color:var(--pink);margin-top:3px}
+.price-r li.b{color:var(--pink-soft);font-weight:600}
+.price-cta{padding:0 40px 44px;text-align:center}
+.price-cta .btn{width:100%;justify-content:center}
+.price-cta small{display:block;color:var(--muted);font-size:13px;margin-top:14px}
+.faq{max-width:760px;margin:70px auto 0}
+.faq details{border-bottom:1px solid var(--line);padding:20px 0}
+.faq summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:20px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";color:var(--pink);font-size:22px;line-height:1;font-weight:400}
+.faq details[open] summary:after{content:"\2212"}
+.faq details p{color:var(--muted);margin-top:10px;font-size:15px}
+.closing{margin-top:80px;text-align:center}
+.closing .hand{font-size:clamp(44px,7vw,72px);line-height:1;display:block;margin-bottom:24px;color:var(--pink-soft)}
+footer{padding:36px 0;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:13px}
+
+/* ============ EFEITOS ============ */
+/* fundo de Londres no topo */
+.hero .bgimg{position:absolute;inset:0;background:url(assets/londres-bg.jpg) center bottom/cover no-repeat;opacity:.95;mix-blend-mode:screen}
+/* holofote que segue o mouse */
+.spot{position:fixed;inset:0;pointer-events:none;z-index:1;background:radial-gradient(520px circle at var(--mx,50%) var(--my,30%),rgba(240,80,154,.10),transparent 60%)}
+/* partículas */
+#sparks{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+/* palavras em inglês flutuando */
+.float-words span{position:absolute;z-index:1;font-family:Caveat,cursive;font-weight:700;color:rgba(255,211,234,.22);pointer-events:none;animation:drift 14s ease-in-out infinite;white-space:nowrap}
+@keyframes drift{0%,100%{transform:translateY(0) rotate(var(--r,0deg))}50%{transform:translateY(-22px) rotate(calc(var(--r,0deg) * -1))}}
+/* título com brilho passando */
+.shine{background:linear-gradient(100deg,#fff 0%,#fff 40%,#ffc2e1 48%,#fff 56%,#fff 100%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite}
+@keyframes shine{from{background-position:150% 0}to{background-position:-100% 0}}
+.hero h1.shine{text-shadow:none;filter:drop-shadow(0 0 24px rgba(255,200,230,.35))}
+
+/* botão: borda girando + reflexo + magnético + faíscas no clique */
+@property --a{syntax:'<angle>';initial-value:0deg;inherits:false}
+.btn{position:relative;isolation:isolate;overflow:visible;border:0}
+.btn:before{content:"";position:absolute;inset:-2px;border-radius:inherit;z-index:-2;background:conic-gradient(from var(--a),#f0509a,#ffd3ea,#b89ad8,#7b3fd1,#f0509a);animation:spinb 3s linear infinite;filter:blur(.5px)}
+.btn:after{content:"";position:absolute;inset:0;border-radius:inherit;z-index:-1;background:var(--grad);}
+@keyframes spinb{to{--a:360deg}}
+.btn .gl{position:absolute;inset:0;border-radius:inherit;overflow:hidden;pointer-events:none}
+.btn .gl:before{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);animation:sweep 3.2s ease-in-out infinite}
+@keyframes sweep{0%,60%{left:-60%}100%{left:130%}}
+.btn:hover{box-shadow:0 0 0 6px rgba(240,80,154,.15),0 18px 60px -8px rgba(240,80,154,.95)}
+.spark{position:fixed;width:6px;height:6px;border-radius:50%;pointer-events:none;z-index:99;animation:pop .7s ease-out forwards}
+@keyframes pop{to{transform:translate(var(--dx),var(--dy)) scale(0);opacity:0}}
+.btn.pulse{animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 12px 40px -10px rgba(240,80,154,.7)}50%{box-shadow:0 0 0 10px rgba(240,80,154,.08),0 12px 60px -6px rgba(240,80,154,1)}}
+
+/* tilt 3D na foto */
+.portrait .ring{transition:transform .2s ease-out;transform-style:preserve-3d}
+
+/* ============ ANTES / DEPOIS ============ */
+.ba{position:relative;margin-top:40px;aspect-ratio:4/5;max-width:440px;border-radius:24px;overflow:hidden;user-select:none;touch-action:pan-y;box-shadow:0 40px 90px -40px rgba(240,80,154,.6);border:1px solid rgba(240,80,154,.35)}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ba .before{clip-path:inset(0 calc(100% - var(--pos,50%)) 0 0)}
+.ba .handle{position:absolute;top:0;bottom:0;left:var(--pos,50%);width:2px;background:#fff;transform:translateX(-1px);box-shadow:0 0 16px var(--pink)}
+.ba .knob{position:absolute;top:50%;left:50%;width:50px;height:50px;border-radius:50%;transform:translate(-50%,-50%);background:var(--grad);display:grid;place-items:center;box-shadow:0 0 0 4px rgba(255,255,255,.9),0 0 30px var(--pink)}
+.ba .knob svg{width:24px;height:24px;color:#fff}
+.ba .lbl{position:absolute;top:16px;padding:7px 14px;border-radius:999px;font-weight:700;font-size:12px;letter-spacing:.1em;text-transform:uppercase;backdrop-filter:blur(6px)}
+.ba .lbl.l{left:16px;background:rgba(23,20,29,.7);color:#d9d0e0}
+.ba .lbl.r{right:16px;background:rgba(240,80,154,.85);color:#fff}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.ba-hint{margin-top:12px;font-size:13px;color:var(--muted);max-width:440px;text-align:center}
+.ba-hint .hand{font-size:22px}
+
+/* Big Ben neon na seção de preço */
+.neon-ben{position:absolute;left:-20px;top:140px;width:280px;mix-blend-mode:screen;opacity:.85;pointer-events:none;animation:flick 5s infinite}
+@keyframes flick{0%,92%,100%{opacity:.85}93%{opacity:.4}95%{opacity:.9}96%{opacity:.5}}
+@media (max-width:1100px){.neon-ben{display:none}}
+
+/* ============ SEÇÕES COM FUNDO (estilo do hero) ============ */
+section{overflow:hidden}
+section > .wrap{z-index:2}
+.secbg{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;pointer-events:none}
+.secbg:after{content:"";position:absolute;inset:0}
+section.dark .secbg{opacity:.9}
+section.dark .secbg:after{background:linear-gradient(180deg,var(--bg) 0%,transparent 18%,transparent 82%,var(--bg) 100%)}
+section .float-words span{z-index:1}
+@media (max-width:900px){section .float-words{display:none}}
+section + section{border-top:0}
+
+/* lilás claro, contraste de revista */
+section.light{
+  --ink:#2a1830;--muted:#6b5a74;--line:rgba(42,24,48,.12);--pink-soft:#c0307a;
+  background:#f3ecf8;color:var(--ink)}
+section.light .secbg{opacity:1}
+section.light .secbg:after{background:linear-gradient(90deg,rgba(243,236,248,.85) 0%,rgba(243,236,248,.35) 55%,transparent 100%)}
+section.light .kicker{color:#c0307a}
+section.light h2.title em{color:#d63c86}
+section.light .incl .en{color:#8a63b8}
+section.light .ic{background:#fff;box-shadow:0 6px 18px -8px rgba(192,48,122,.4)}
+section.light .dots{background-image:radial-gradient(rgba(42,24,48,.25) 1.2px,transparent 1.4px)}
+section.light .float-words span{color:rgba(192,48,122,.16)}
+section.light .week{background:rgba(255,255,255,.6);border:1px solid rgba(192,48,122,.15);border-radius:18px;padding:24px;backdrop-filter:blur(4px);transition:transform .3s,box-shadow .3s}
+section.light .week:hover{transform:translateY(-6px);box-shadow:0 20px 40px -20px rgba(192,48,122,.45)}
+section.light .ba{box-shadow:0 40px 80px -40px rgba(123,63,209,.55)}
+/* bônus continua escuro dentro da seção clara */
+section.light .bonus{background:radial-gradient(circle at 20% 30%,rgba(240,80,154,.35),transparent 55%),#1b1522;color:#f4eef6;border:1px solid rgba(240,80,154,.45);box-shadow:0 40px 90px -40px rgba(123,63,209,.7)}
+section.light .bonus .kicker{color:var(--pink)}
+
+/* bônus animado */
+.bonus-art{width:240px;position:relative}
+.bonus-art img{width:100%;animation:bob 5s ease-in-out infinite;filter:drop-shadow(0 0 18px rgba(240,80,154,.45))}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-1.5deg)}50%{transform:translateY(-12px) rotate(1.5deg)}}
+.bonus-art:after{content:"";position:absolute;left:15%;right:15%;bottom:-6px;height:14px;border-radius:50%;background:rgba(240,80,154,.35);filter:blur(10px);animation:shadow 5s ease-in-out infinite}
+@keyframes shadow{50%{transform:scaleX(.75);opacity:.5}}
+
+/* cards dos meses */
+.months{border:0;border-radius:0;overflow:visible;gap:16px}
+.month{position:relative;border:1px solid var(--line) !important;border-radius:18px;background:rgba(30,26,38,.75);backdrop-filter:blur(6px);padding:22px 20px;transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .35s,box-shadow .35s;transform-style:preserve-3d;opacity:0;transform:translateY(30px)}
+.months.in .month{opacity:1;transform:none;transition-delay:calc(var(--i)*70ms)}
+.month:hover{border-color:rgba(240,80,154,.7) !important;box-shadow:0 0 0 1px rgba(240,80,154,.4),0 20px 50px -20px rgba(240,80,154,.8);transition-delay:0s}
+.month .mi{width:64px;height:64px;margin-bottom:10px;background-image:url(assets/meses.png);background-size:400% 300%;animation:bob 4s ease-in-out infinite;animation-delay:calc(var(--i)*-.35s)}
+.month:hover .mi{filter:drop-shadow(0 0 10px #f0509a) brightness(1.3)}
+
+/* ============ V4: MODELAGEM DA REFERÊNCIA ============ */
+/* rótulo em pílula como no Softery */
+.kicker{display:inline-block;background:rgba(240,80,154,.14);padding:7px 16px;border-radius:999px;font-size:11px}
+section.light .kicker{background:rgba(214,60,134,.12)}
+
+/* fundos bem no fundo, como o hero */
+section.dark .secbg{opacity:.42}
+section.dark .secbg:after{background:linear-gradient(180deg,var(--bg) 0%,rgba(23,20,29,.35) 25%,rgba(23,20,29,.35) 75%,var(--bg) 100%)}
+section.light .secbg{opacity:.5}
+section.light .secbg:after{background:rgba(243,236,248,.45)}
+.sparks{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:1}
+/* formas soltas se mexendo */
+.deco{animation:decoF 9s ease-in-out infinite}
+.deco.x{animation:decoR 12s linear infinite}
+@keyframes decoF{50%{transform:translate(10px,-14px)}}
+@keyframes decoR{to{transform:rotate(360deg)}}
+.zig{width:22px;height:60px;background:linear-gradient(135deg,transparent 40%,var(--pink) 40% 55%,transparent 55%) 0 0/22px 14px repeat-y;opacity:.6}
+.stripes{width:90px;height:90px;border-radius:50%;background:repeating-linear-gradient(45deg,rgba(184,154,216,.35) 0 2px,transparent 2px 9px)}
+section.light .stripes{background:repeating-linear-gradient(45deg,rgba(138,99,184,.3) 0 2px,transparent 2px 9px)}
+
+/* HERO: círculo duro em degradê + notebook */
+.hero:before{background:none}
+.blob{position:absolute;z-index:0;left:-14vw;top:-26vw;width:min(72vw,1050px);aspect-ratio:1;border-radius:50%;background:linear-gradient(135deg,#8e2de2 0%,#c03fd0 45%,#f0509a 100%);overflow:hidden;box-shadow:0 40px 120px -30px rgba(240,80,154,.55)}
+.blob img{position:absolute;right:6%;bottom:2%;width:46%;opacity:.16;mix-blend-mode:luminosity;filter:grayscale(1)}
+.hero .bgimg{opacity:.75}
+.hero-visual{position:relative;justify-self:end;width:min(560px,100%)}
+.laptop{position:relative;animation:bob 7s ease-in-out infinite}
+.laptop .screen{position:relative;aspect-ratio:16/10;border-radius:14px 14px 0 0;background:#1b1522;border:10px solid #e9e6ee;border-bottom-width:12px;overflow:hidden;box-shadow:0 40px 90px -30px rgba(0,0,0,.7)}
+.laptop .base{height:14px;margin:0 -7%;background:linear-gradient(#f4f2f7,#c9c4d1);border-radius:0 0 18px 18px;position:relative}
+.laptop .base:after{content:"";position:absolute;left:42%;right:42%;top:0;height:5px;background:#b5afbf;border-radius:0 0 8px 8px}
+.ui{position:absolute;inset:0;display:grid;grid-template-columns:1fr 26%;grid-template-rows:26px 1fr 30px;gap:6px;padding:8px}
+.ui-top{grid-column:1/-1;display:flex;align-items:center;gap:8px;font-size:9px;color:#cfc4d8;letter-spacing:.08em}
+.live{background:#f0509a;color:#fff;font-weight:700;padding:2px 7px;border-radius:4px;animation:pulseLive 1.6s infinite}
+@keyframes pulseLive{50%{opacity:.55}}
+.ui-main{position:relative;border-radius:8px;overflow:hidden;background:#2a1830}
+.ui-main img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.ui-main .board{position:absolute;left:8px;bottom:8px;background:rgba(255,255,255,.92);color:#2a1830;font-family:Caveat,cursive;font-weight:700;font-size:15px;padding:2px 10px;border-radius:6px;transform:rotate(-3deg)}
+.ui-side{display:grid;grid-template-rows:repeat(4,1fr);gap:5px}
+.ui-side div{border-radius:7px;background:linear-gradient(135deg,#3a2347,#2a1830);display:grid;place-items:center;font-family:Oswald;font-size:13px;color:#ffd3ea;position:relative}
+.ui-side div:after{content:"";position:absolute;right:5px;bottom:5px;width:5px;height:5px;border-radius:50%;background:#5fd38d}
+.ui-chat{grid-column:1/-1;display:flex;gap:6px;align-items:center}
+.ui-chat span{font-size:9px;background:#3a2347;color:#f4eef6;padding:4px 9px;border-radius:10px 10px 10px 2px;opacity:0;animation:chatIn 9s infinite}
+.ui-chat span:nth-child(2){animation-delay:1.5s;background:#f0509a}
+.ui-chat span:nth-child(3){animation-delay:3s}
+@keyframes chatIn{0%,5%{opacity:0;transform:translateY(6px)}12%,85%{opacity:1;transform:none}100%{opacity:0}}
+.hero-visual .hello{left:-40px;top:-30px;z-index:3}
+.hero-visual .bloom{right:-24px;bottom:30px;z-index:3;width:100px}
+.hero-visual .tag-name{bottom:-46px}
+.float-card{position:absolute;z-index:3;background:#fff;color:#2a1830;border-radius:12px;padding:10px 14px;font-size:12px;font-weight:600;box-shadow:0 20px 40px -14px rgba(0,0,0,.45);display:flex;align-items:center;gap:10px;animation:bob 6s ease-in-out infinite}
+.float-card b{font-family:Oswald;font-size:22px;color:#d63c86;line-height:1}
+
+/* PARA QUEM É: cards flutuando + checklist */
+.fit{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;margin-bottom:110px}
+.dash{position:relative;min-height:380px}
+.dash .panel{position:absolute;left:0;top:30px;width:78%;border-radius:18px;background:rgba(30,26,38,.85);border:1px solid var(--line);padding:22px;backdrop-filter:blur(6px)}
+.dash .panel small{font-size:11px;color:var(--muted);letter-spacing:.14em;text-transform:uppercase}
+.dash svg.chart{width:100%;height:150px;margin-top:10px;overflow:visible}
+.chart .ln{fill:none;stroke:url(#gl);stroke-width:3;stroke-dasharray:600;stroke-dashoffset:600}
+.fit.in .chart .ln{animation:draw 2.4s ease-out forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.chart circle{fill:#f0509a;filter:drop-shadow(0 0 8px #f0509a)}
+.chart .halo{fill:rgba(240,80,154,.18);animation:halo 2s ease-in-out infinite}
+@keyframes halo{50%{r:16}}
+.chart text{fill:#b3a9bb;font-size:9px;font-family:Montserrat}
+.dash .ringc{position:absolute;right:0;top:0;width:150px;background:#fff;border-radius:16px;padding:16px;text-align:center;color:#2a1830;box-shadow:0 30px 60px -20px rgba(0,0,0,.6);animation:bob 6s ease-in-out infinite}
+.ringc svg{width:90px;height:90px;transform:rotate(-90deg)}
+.ringc .bgc{fill:none;stroke:#f1e6f4;stroke-width:9}
+.ringc .fg{fill:none;stroke:url(#gr);stroke-width:9;stroke-linecap:round;stroke-dasharray:251;stroke-dashoffset:251;transition:stroke-dashoffset 2s ease-out .4s}
+.fit.in .ringc .fg{stroke-dashoffset:0}
+.ringc strong{display:block;font-family:Oswald;font-size:20px;margin-top:-62px;margin-bottom:38px}
+.ringc span{font-size:11px;color:#6b5a74}
+.dash .mini{position:absolute;right:6%;bottom:0;background:var(--grad);color:#fff;border-radius:14px;padding:14px 18px;box-shadow:0 24px 50px -16px rgba(240,80,154,.8);animation:bob 5s ease-in-out infinite;animation-delay:-2s}
+.dash .mini b{display:block;font-family:Oswald;font-size:30px;line-height:1}
+.dash .mini span{font-size:12px;opacity:.9}
+.dash .tag{position:absolute;left:-10px;bottom:20px;background:#fff;color:#2a1830;border-radius:12px;padding:10px 14px;font-size:12px;font-weight:700;display:flex;align-items:center;gap:8px;box-shadow:0 20px 40px -14px rgba(0,0,0,.5);animation:bob 7s ease-in-out infinite;animation-delay:-3s}
+.dash .tag i{width:26px;height:26px;border-radius:50%;background:var(--grad)}
+.checks{list-style:none;margin-top:22px}
+.checks li{display:flex;gap:14px;padding:11px 0;color:#e7dfec}
+.checks li:before{content:"";flex:none;width:24px;height:24px;border-radius:50%;margin-top:2px;background:rgba(240,80,154,.16) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f0509a' stroke-width='3'%3E%3Cpath d='M6 12l4 4 8-9'/%3E%3C/svg%3E") center/14px no-repeat}
+
+/* COMO FUNCIONA: passos numerados + foto em órbita */
+.steps-wrap{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;margin-top:40px}
+.steps{list-style:none;counter-reset:s}
+.steps li{display:grid;grid-template-columns:40px 1fr;gap:18px;padding:22px 24px;border-bottom:1px solid var(--line);border-radius:18px;transition:background .3s,box-shadow .3s,transform .3s;cursor:default}
+.steps li:last-child{border-bottom:0}
+.steps li:before{counter-increment:s;content:counter(s);width:40px;height:40px;border-radius:50%;background:var(--grad);color:#fff;display:grid;place-items:center;font-weight:700;font-size:15px}
+.steps li.on,.steps li:hover{background:#fff;border-color:transparent;box-shadow:0 30px 60px -30px rgba(123,63,209,.45);transform:translateX(6px)}
+.steps h3{font-size:16px;font-weight:700;margin-bottom:4px}
+.steps p{color:var(--muted);font-size:15px}
+.steps small{display:block;margin-top:8px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:#d63c86}
+.orbit{position:relative;width:min(440px,100%);aspect-ratio:1;justify-self:center}
+.orbit .o{position:absolute;border-radius:50%;border:1.5px dashed rgba(138,99,184,.45);animation:decoR 40s linear infinite}
+.orbit .o1{inset:0}.orbit .o2{inset:-7%;animation-duration:60s;animation-direction:reverse;border-color:rgba(214,60,134,.3)}
+.orbit .o i{position:absolute;top:-6px;left:50%;width:12px;height:12px;border-radius:50%;background:var(--grad);box-shadow:0 0 12px #f0509a}
+.orbit .o2 i{top:auto;bottom:12%;left:6%;width:9px;height:9px}
+.orbit .ph{position:absolute;inset:9%;border-radius:50%;padding:6px;background:var(--grad);box-shadow:0 40px 80px -30px rgba(123,63,209,.7)}
+.orbit .ph img{width:100%;height:100%;object-fit:cover;border-radius:50%}
+
+/* bônus e meses SEM fundo */
+section.light .bonus{background:none;border:0;box-shadow:none;color:var(--ink);padding:20px 0}
+section.light .bonus p{color:var(--muted)}
+section.light .bonus .kicker{color:#c0307a}
+.bonus-art img{filter:drop-shadow(0 10px 18px rgba(75,42,107,.18))}
+section.light .bonus-art:after{background:rgba(75,42,107,.18)}
+.orbit .ph img{filter:grayscale(1) contrast(1.05)}
+.orbit .ph:after{content:"";position:absolute;inset:6px;border-radius:50%;background:linear-gradient(160deg,rgba(240,80,154,.35),rgba(123,63,209,.25));mix-blend-mode:color}
+.orbit .tag-name{position:absolute;left:50%;bottom:4%;transform:translateX(-50%);z-index:3;box-shadow:0 14px 30px -12px rgba(75,42,107,.5)}
+.orbit-hello{position:absolute;left:0;top:8%;z-index:3;font-size:40px;color:#d63c86;text-shadow:none;transform:rotate(-12deg)}
+.month{background:none !important;border:0 !important;backdrop-filter:none !important;box-shadow:none !important;padding:14px 10px !important}
+.month:hover{box-shadow:none !important}
+.month:hover b{color:var(--pink-soft)}
+.month .mi{width:72px;height:72px}
+.month:hover .mi{transform:scale(1.12)}
+
+/* CONTADOR em caixinhas numa faixa ondulada */
+.band{position:relative;margin:0 0 90px;padding:70px 0 80px;text-align:center}
+.band:before{content:"";position:absolute;inset:0 -50vw;background:#120f17;z-index:-1;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 400' preserveAspectRatio='none'%3E%3Cpath d='M0 40 C240 0 480 70 720 40 S1200 0 1440 40 V360 C1200 400 960 330 720 360 S240 400 0 360Z'/%3E%3C/svg%3E") center/100% 100% no-repeat;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 400' preserveAspectRatio='none'%3E%3Cpath d='M0 40 C240 0 480 70 720 40 S1200 0 1440 40 V360 C1200 400 960 330 720 360 S240 400 0 360Z'/%3E%3C/svg%3E") center/100% 100% no-repeat}
+.band h3{font-family:Oswald;font-weight:500;text-transform:uppercase;font-size:clamp(24px,3.4vw,34px);margin:14px 0 26px}
+.cd{display:flex;justify-content:center;align-items:center;gap:8px;flex-wrap:wrap}
+.cd .bx{display:flex;gap:6px}
+.cd .bx span{width:clamp(44px,7vw,64px);height:clamp(58px,9vw,82px);border-radius:10px;background:#221c2b;display:grid;place-items:center;font-family:Oswald;font-weight:700;font-size:clamp(30px,5vw,48px);background-clip:padding-box;color:#f0509a;text-shadow:0 0 14px rgba(240,80,154,.7)}
+.cd .bx:first-child span{color:#a95cf0;text-shadow:0 0 14px rgba(169,92,240,.7)}
+.cd .sep{font-family:Oswald;font-size:40px;color:#b89ad8;animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:.2}}
+.cd-lbl{display:flex;justify-content:center;gap:clamp(40px,8vw,92px);margin-top:10px;font-size:11px;letter-spacing:.2em;color:var(--muted);font-weight:600}
+.band.over .cd,.band.over .cd-lbl{display:none}
+
+/* TABELA comparativa com coluna destacada */
+.cmp{max-width:860px;margin:0 auto 90px}
+.cmp table{width:100%;border-collapse:separate;border-spacing:0;font-size:14px}
+.cmp th{font-family:Oswald;font-weight:500;font-size:18px;padding:16px 10px;text-transform:uppercase;color:#e7dfec}
+.cmp th.hl{background:var(--grad);border-radius:16px 16px 0 0;color:#fff}
+.cmp td{padding:14px 10px;text-align:center;color:var(--muted);border-top:1px solid var(--line)}
+.cmp td:first-child{text-align:left;color:#e7dfec;font-weight:600}
+.cmp tr:nth-child(even) td{background:rgba(255,255,255,.025)}
+.cmp td.hl{background:#241c2e !important;color:#fff;font-weight:700;box-shadow:inset 1px 0 0 rgba(240,80,154,.35),inset -1px 0 0 rgba(240,80,154,.35)}
+.cmp tr:last-child td.hl{border-radius:0 0 16px 16px;box-shadow:inset 1px 0 0 rgba(240,80,154,.35),inset -1px 0 0 rgba(240,80,154,.35),inset 0 -1px 0 rgba(240,80,154,.35)}
+.cmp .y{color:#f0509a;font-size:18px}.cmp .n{color:#5f5568;font-size:18px}
+.cmp-wrap{overflow-x:auto}
+
+@media (max-width:900px){
+  .fit,.steps-wrap{grid-template-columns:1fr;gap:50px}
+  .dash{min-height:340px}
+  .hero-visual{justify-self:center;margin:30px auto 60px;width:100%}
+  .hero-visual .hello{left:-6px;top:-40px;font-size:34px}
+  .blob{width:150vw;left:-60vw;top:-80vw}
+  .blob img{display:none}
+  .float-card{display:none}
+  .cmp th{font-size:14px;padding:12px 6px}.cmp td{font-size:12px;padding:12px 6px}
+}
+
+/* BARRA FIXA COM CRONÔMETRO */
+.topbar{position:sticky;top:0;z-index:50;background:linear-gradient(90deg,#8e2de2,#c03fd0 50%,#f0509a);color:#fff;box-shadow:0 8px 30px -10px rgba(240,80,154,.6)}
+.topbar .in{display:flex;align-items:center;justify-content:center;gap:18px;padding:9px 16px;flex-wrap:wrap}
+.topbar .msg{font-weight:700;font-size:13px;letter-spacing:.1em;text-transform:uppercase;display:flex;align-items:center;gap:8px}
+.topbar .msg i{width:8px;height:8px;border-radius:50%;background:#fff;box-shadow:0 0 0 0 rgba(255,255,255,.8);animation:ping 1.6s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 9px rgba(255,255,255,0)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
+.tb-cd{display:flex;align-items:center;gap:5px}
+.tb-cd div{min-width:40px;text-align:center;background:rgba(23,20,29,.35);border-radius:7px;padding:3px 6px;line-height:1.05}
+.tb-cd b{display:block;font-family:Oswald;font-size:19px;font-weight:600}
+.tb-cd small{font-size:9px;letter-spacing:.14em;opacity:.85}
+.tb-cd span{font-family:Oswald;font-size:18px;opacity:.7;animation:blink 1s steps(2) infinite}
+.tb-cta{background:#fff;color:#c0307a;font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;padding:8px 16px;border-radius:999px;transition:transform .2s}
+.tb-cta:hover{transform:scale(1.05)}
+.topbar.over .tb-cd{display:none}
+@media (max-width:600px){.topbar .in{gap:10px;padding:7px 10px}.topbar .msg{font-size:11px;width:100%;justify-content:center}.tb-cd div{min-width:34px}.tb-cd b{font-size:16px}.tb-cta{padding:7px 12px;font-size:11px}}
+
+/* Reveal */
+.rv{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}.bloom,.btn:before,.btn .gl:before,.shine,.float-words span,.neon-ben,.btn.pulse{animation:none}#sparks{display:none}}
+
+/* ============ Responsivo ============ */
+@media (max-width:900px){
+  section{padding:80px 0}
+  .hero-grid,.split{grid-template-columns:1fr;gap:50px}
+  .portrait{width:min(320px,86%)}
+  .hero .bgimg{opacity:.45;background-position:30% bottom}
+  .hello{left:-14px;font-size:36px}
+  .stages{grid-template-columns:1fr;border-top:0;border-left:1px solid var(--line);margin-left:6px}
+  .stage{border-right:0;border-bottom:1px solid var(--line);padding:20px 0 20px 24px}
+  .stage:before{top:26px;left:-5px}
+  .months{grid-template-columns:1fr 1fr}
+  .month:nth-child(4n){border-right:1px solid var(--line)}
+  .month:nth-child(2n){border-right:0}
+  .month:nth-last-child(-n+4){border-bottom:1px solid var(--line)}
+  .month:nth-last-child(-n+2){border-bottom:0}
+  .weeks{grid-template-columns:1fr 1fr}
+  .bonus{grid-template-columns:1fr;padding:34px 24px;gap:24px}
+  .bonus .books{width:140px}
+  .price-body{grid-template-columns:1fr}
+  .price-l{border-right:0;border-bottom:1px solid var(--line)}
+  .price-r,.price-cta{padding-left:24px;padding-right:24px}
+  .bigben{max-width:200px}
+  .digit{min-width:64px}
+}
+@media (max-width:480px){
+  .weeks{grid-template-columns:1fr}
+  .months{grid-template-columns:1fr}
+  .month{border-right:0 !important;border-bottom:1px solid var(--line) !important}
+  .month:last-child{border-bottom:0 !important}
+  .hero-meta{gap:20px}
+  .digit-sep{display:none}
+  .nav-cta{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar" id="topbar" role="region" aria-label="Oferta de Black Friday">
+  <div class="in">
+    <div class="msg"><i></i>Black Friday · Esgota em poucos dias</div>
+    <div class="tb-cd" id="tbcd" aria-live="off">
+      <div><b>00</b><small>DIAS</small></div><span>:</span>
+      <div><b>00</b><small>HRS</small></div><span>:</span>
+      <div><b>00</b><small>MIN</small></div><span>:</span>
+      <div><b>00</b><small>SEG</small></div>
+    </div>
+    <a class="tb-cta" href="#inscricao">Garantir vaga</a>
+  </div>
+</div>
+
+<!-- ======================= 1. HERO ======================= -->
+<div class="spot" aria-hidden="true"></div>
+<header class="hero">
+  <div class="bgimg" aria-hidden="true"></div>
+  <div class="blob" aria-hidden="true"><img src="assets/milla.jpg" alt=""></div>
+  <canvas class="sparks" aria-hidden="true"></canvas>
+  <div class="float-words" aria-hidden="true">
+    <span style="left:4%;top:78%;font-size:30px;--r:-6deg">How are you?</span>
+    <span style="left:38%;top:14%;font-size:26px;--r:5deg;animation-delay:-4s">Let's talk!</span>
+    <span style="right:6%;top:84%;font-size:28px;--r:-4deg;animation-delay:-8s">I can do it</span>
+    <span style="left:44%;top:88%;font-size:24px;--r:6deg;animation-delay:-2s">Nice to meet you</span>
+  </div>
+  <div class="wrap">
+    <nav>
+      <a class="logo" href="#"><b>MS</b><span>LEARNINGS</span></a>
+      <a class="nav-cta" href="#inscricao">Garantir minha vaga</a>
+    </nav>
+
+    <div class="hero-grid">
+      <div class="rv">
+        <div class="bf">BLACK FRIDAY</div>
+        <h1 class="shine">English<br>Bloom 27<small>Programa anual de inglês</small></h1>
+        <p class="sub">Inglês pra quem não tem tempo sobrando. São duas aulas ao vivo por mês com a Teacher Milla, uma turma de 15 pessoas no mesmo nível que você, e a primeira aula é em janeiro.</p>
+        <a class="btn pulse" href="#inscricao">Quero minha vaga
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <div class="hero-meta">
+          <div><strong><s class="was">R$ 297</s> R$ 169,90</strong><span>por mês</span></div>
+          <div><strong>24 aulas</strong><span>ao vivo no ano</span></div>
+          <div><strong>15 vagas</strong><span>turma única</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual portrait rv">
+        <div class="laptop">
+          <div class="screen"><div class="ui">
+            <div class="ui-top"><span class="live">LIVE</span>English Bloom 27 · Live Class</div>
+            <div class="ui-main"><img src="assets/milla.jpg" alt="Teacher Milla dando aula ao vivo"><span class="board">Hello! How are you?</span></div>
+            <div class="ui-side"><div>A</div><div>J</div><div>M</div><div>R</div></div>
+            <div class="ui-chat"><span>Hi, teacher!</span><span>I&#39;m fine, thank you!</span><span>Can you repeat, please?</span></div>
+          </div></div>
+          <div class="base"></div>
+        </div>
+        <div class="hello hand">Hello,<br>guys!</div>
+        <svg class="bloom" viewBox="0 0 100 100" aria-hidden="true"><g fill="#b89ad8">
+          <ellipse cx="50" cy="22" rx="10" ry="24"/><ellipse cx="50" cy="78" rx="10" ry="24"/>
+          <ellipse cx="22" cy="50" rx="24" ry="10"/><ellipse cx="78" cy="50" rx="24" ry="10"/>
+          <ellipse cx="50" cy="22" rx="10" ry="24" transform="rotate(45 50 50)"/><ellipse cx="50" cy="78" rx="10" ry="24" transform="rotate(45 50 50)"/>
+          <ellipse cx="22" cy="50" rx="24" ry="10" transform="rotate(45 50 50)"/><ellipse cx="78" cy="50" rx="24" ry="10" transform="rotate(45 50 50)"/></g></svg>
+        <div class="float-card" style="right:-20px;top:-34px"><b>15</b>vagas<br>na turma</div>
+        <div class="tag-name">Teacher Milla Saso</div>
+      </div>
+    </div>
+  </div>
+  <span class="deco x" style="right:8%;top:70%"></span>
+  <span class="deco dots" style="right:3%;top:18%"></span>
+  <span class="deco moon" style="left:46%;bottom:40px"></span>
+</header>
+
+<!-- ======================= 2. O QUE É + INCLUSO ======================= -->
+<section id="programa" class="light">
+  <div class="secbg" style="background-image:url(assets/bg-rua.jpg)"></div>
+  <canvas class="sparks" aria-hidden="true"></canvas>
+  <span class="deco zig" style="left:3%;top:30%"></span>
+  <span class="deco stripes" style="right:4%;bottom:12%"></span>
+  <div class="float-words" aria-hidden="true"><span style="right:8%;top:10%;font-size:30px;--r:-5deg">Where is the bus stop?</span><span style="left:3%;bottom:6%;font-size:26px;--r:4deg;animation-delay:-5s">Cheers!</span></div>
+  <div class="wrap split">
+    <div class="rv">
+      <div class="kicker">What is English Bloom?</div>
+      <h2 class="title">Aprenda inglês mesmo com a <em>rotina corrida</em>. Começa em janeiro.</h2>
+      <p class="lead">Você já começou curso, baixou app, salvou lista de vocabulário. Durou umas três semanas. Aí veio o trabalho, a casa, o cansaço, e o inglês ficou pra depois.</p>
+      <p class="lead" style="margin-top:14px">Aqui você tem hora marcada a cada 15 dias, com a Teacher Milla do outro lado da tela. Entre uma aula e outra chega um desafio curto: gravar um áudio, ouvir um trecho, escrever três frases. Dá pra fazer no intervalo do almoço.</p>
+      <div class="teacher"><b>Quem conduz:</b> a Teacher Milla Saso, do primeiro "My name is" em janeiro até o encontro presencial no fim do ano.</div>
+
+      <div class="ba" id="ba" style="--pos:50%">
+        <img src="assets/depois.jpg" alt="Milla feliz conversando em inglês">
+        <img class="before" src="assets/antes.jpg" alt="Milla frustrada estudando inglês sozinha">
+        <span class="lbl l">Sad without English</span>
+        <span class="lbl r">Happy with English</span>
+        <div class="handle"><div class="knob"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></div></div>
+        <input type="range" min="0" max="100" value="50" aria-label="Arraste para comparar antes e depois">
+      </div>
+      <p class="ba-hint"><span class="hand">arraste a linha</span> e veja a diferença entre estudar sozinho e ter uma turma com você</p>
+    </div>
+
+    <div class="rv">
+      <div class="kicker">What's included</div>
+      <ul class="incl">
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="14" height="14" rx="2"/><path d="M17 10l4-3v10l-4-3"/></svg></span>
+          <div><h3>2 aulas ao vivo por mês <span class="en">live classes</span></h3><p>Explicação, conversação e prática guiada com a Teacher Milla, no ritmo do Básico 1.</p></div></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h11l5 5v11H4z"/><path d="M14 4v6h6M8 14h8M8 17h5"/></svg></span>
+          <div><h3>Materiais digitais</h3><p>Apostilas, exercícios, vocabulário e atividades de revisão para estudar quando quiser.</p></div></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l2.6 5.4 5.9.8-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.8z"/></svg></span>
+          <div><h3>English Challenges <span class="en">your mission</span></h3><p>Missões curtas entre as aulas, pra você não passar 15 dias sem abrir a boca em inglês.</p></div></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h12v9H8l-4 4z"/><path d="M16 9h4v9l-3-3h-6v-1"/></svg></span>
+          <div><h3>Comunidade da turma</h3><p>Lugar para tirar dúvida, mostrar o que aprendeu e praticar com quem está no mesmo caminho.</p></div></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></span>
+          <div><h3>Checkpoints de evolução</h3><p>Revisões periódicas para você enxergar o quanto já andou.</p></div></li>
+      </ul>
+    </div>
+  </div>
+  <span class="deco x" style="left:46%;top:60px"></span>
+  <span class="deco dots" style="right:2%;bottom:10%"></span>
+</section>
+
+<!-- ======================= 3. JORNADA ======================= -->
+<section id="jornada" class="dark">
+  <div class="secbg" style="background-image:url(assets/bg-ponte.jpg)"></div>
+  <canvas class="sparks" aria-hidden="true"></canvas>
+  <span class="deco zig" style="left:3%;top:30%"></span>
+  <span class="deco stripes" style="right:4%;bottom:12%"></span>
+  <div class="float-words" aria-hidden="true"><span style="left:4%;top:8%;font-size:28px;--r:-4deg">Step by step</span><span style="right:5%;top:46%;font-size:26px;--r:5deg;animation-delay:-6s">Keep going!</span></div>
+  <div class="wrap">
+    <div class="fit rv">
+      <div class="dash" aria-hidden="true">
+        <div class="panel">
+          <small>Sua evolução no ano</small>
+          <svg class="chart" viewBox="0 0 300 150">
+            <defs><linearGradient id="gl" x1="0" x2="1"><stop offset="0" stop-color="#8e2de2"/><stop offset="1" stop-color="#f0509a"/></linearGradient>
+            <linearGradient id="gr" x1="0" x2="1"><stop offset="0" stop-color="#8e2de2"/><stop offset="1" stop-color="#f0509a"/></linearGradient></defs>
+            <path class="ln" d="M0 130 C40 125 50 100 80 104 S130 80 150 70 S210 60 230 40 S280 18 300 10"/>
+            <circle class="halo" cx="80" cy="104" r="11"/><circle cx="80" cy="104" r="5"/>
+            <circle class="halo" cx="230" cy="40" r="11"/><circle cx="230" cy="40" r="5"/>
+            <text x="0" y="148">JAN</text><text x="140" y="148">JUN</text><text x="280" y="148">DEZ</text>
+          </svg>
+        </div>
+        <div class="ringc"><svg viewBox="0 0 100 100"><circle class="bgc" cx="50" cy="50" r="40"/><circle class="fg" cx="50" cy="50" r="40"/></svg><strong>12</strong><span>temas no ano</span></div>
+        <div class="mini"><b>24</b><span>aulas ao vivo</span></div>
+        <div class="tag"><i></i>Básico 1 → Independent</div>
+      </div>
+      <div>
+        <div class="kicker">Find yourself</div>
+        <h2 class="title">É pra <em>você</em> se...</h2>
+        <ul class="checks">
+          <li>Você está no Básico 1: entende palavras soltas, mas trava na hora de montar uma frase.</li>
+          <li>Já tentou app ou curso gravado e largou no meio do caminho.</li>
+          <li>Quer aula com hora marcada, mas não tem tempo pra aula toda semana.</li>
+          <li>Quer alguém corrigindo a sua fala, não só exercício de marcar X.</li>
+          <li>Aprende melhor junto, numa turma pequena do seu nível.</li>
+        </ul>
+        <a class="btn" href="#inscricao" style="margin-top:26px">Sou eu, quero entrar</a>
+      </div>
+    </div>
+
+    <div class="center rv">
+      <div class="kicker">Your 12-month journey</div>
+      <h2 class="title">Você sempre sabe<br><em>o que vem</em> no mês seguinte</h2>
+      <p class="lead">Janeiro começa pelo básico do Básico 1. Cada mês usa o que você aprendeu no anterior, então nada fica solto.</p>
+    </div>
+
+
+    <div class="stages rv">
+      <div class="stage"><div class="when">Primeiros 30 dias</div><h3>Building Confidence</h3><p>Frases básicas, vocabulário do dia a dia e os primeiros diálogos.</p></div>
+      <div class="stage"><div class="when">Meses 2 e 3</div><h3>Finding Your Voice</h3><p>Falar de você, da rotina, da família e do trabalho. Perguntar e responder.</p></div>
+      <div class="stage"><div class="when">Meses 4 a 6</div><h3>Communicating</h3><p>Contar experiências, falar do passado e dos planos.</p></div>
+      <div class="stage"><div class="when">Meses 7 a 9</div><h3>Expanding Your English</h3><p>Ouvir melhor, ler mais e dar a sua opinião.</p></div>
+      <div class="stage"><div class="when">Meses 10 a 12</div><h3>Becoming Independent</h3><p>Montar ideias sozinho e entrar numa conversa com mais autonomia.</p></div>
+    </div>
+
+    <div class="months rv">
+      <div class="month"><span>Jan</span><b>First Steps</b><p>Apresentações, verb to be, informações pessoais.</p></div>
+      <div class="month"><span>Fev</span><b>My Routine</b><p>Rotina, horários, hábitos, simple present.</p></div>
+      <div class="month"><span>Mar</span><b>People &amp; Relationships</b><p>Família, características, relacionamentos.</p></div>
+      <div class="month"><span>Abr</span><b>Food &amp; Lifestyle</b><p>Alimentação, preferências, fazer pedidos.</p></div>
+      <div class="month"><span>Mai</span><b>Future Plans</b><p>Planos, sonhos e objetivos.</p></div>
+      <div class="month"><span>Jun</span><b>Past Experiences</b><p>Simple past, viagens, experiências.</p></div>
+      <div class="month"><span>Jul</span><b>Around the World</b><p>Países, culturas, direções.</p></div>
+      <div class="month"><span>Ago</span><b>Work &amp; Career</b><p>Profissões e comunicação no trabalho.</p></div>
+      <div class="month"><span>Set</span><b>Everyday English</b><p>Situações práticas e resolver problemas.</p></div>
+      <div class="month"><span>Out</span><b>Opinions &amp; Ideas</b><p>Opinar, argumentar, conversar.</p></div>
+      <div class="month"><span>Nov</span><b>Real-Life Communication</b><p>Simulações e diálogos reais.</p></div>
+      <div class="month"><span>Dez</span><b>Blooming Results</b><p>Revisão, apresentações e avaliação final.</p></div>
+    </div>
+    <p class="note">A evolução depende do seu ponto de partida, da presença nas aulas e da prática entre elas. O programa dá a estrutura; não prometemos fluência em prazo fixo.</p>
+  </div>
+  <span class="deco moon" style="right:6%;top:80px"></span>
+  <span class="deco dots" style="left:2%;top:40%"></span>
+</section>
+
+<!-- ======================= 4. COMO FUNCIONA + BÔNUS ======================= -->
+<section id="como-funciona" class="light">
+  <div class="secbg" style="background-image:url(assets/bg-doodles.jpg)"></div>
+  <canvas class="sparks" aria-hidden="true"></canvas>
+  <span class="deco zig" style="left:3%;top:30%"></span>
+  <span class="deco stripes" style="right:4%;bottom:12%"></span>
+  <div class="float-words" aria-hidden="true"><span style="right:6%;top:8%;font-size:30px;--r:5deg">See you next class!</span><span style="left:4%;top:44%;font-size:26px;--r:-5deg;animation-delay:-4s">Practice makes progress</span></div>
+  <div class="wrap">
+    <div class="rv">
+      <div class="kicker">How it works</div>
+      <h2 class="title">Um mês no English Bloom<br>cabe na <em>sua semana</em></h2>
+      <p class="lead">Duas aulas e duas semanas de prática leve. Simples de manter do começo ao fim do ano.</p>
+    </div>
+    <div class="steps-wrap">
+      <ol class="steps rv">
+        <li class="on"><div><h3>Semana 1 · Live Class</h3><p>Tema do mês, vocabulário e gramática dentro de contexto, com prática guiada.</p><small>Ao vivo com a Milla</small></div></li>
+        <li><div><h3>Semana 2 · English Challenge</h3><p>Um desafio prático: listening, texto curto ou áudio gravado por você.</p></div></li>
+        <li><div><h3>Semana 3 · Live Class</h3><p>Conversação, aplicação do tema e correção do que ficou difícil.</p></div></li>
+        <li><div><h3>Semana 4 · Review &amp; Practice</h3><p>Revisão, desafio final e aquecimento para o próximo tema.</p></div></li>
+      </ol>
+      <div class="orbit rv">
+        <div class="o o2"><i></i></div><div class="o o1"><i></i></div>
+        <div class="ph"><img src="assets/milla.jpg" alt="Teacher Milla Saso"></div>
+        <div class="hello hand orbit-hello">Hello,<br>guys!</div>
+        <div class="tag-name">Teacher Milla Saso</div>
+      </div>
+    </div>
+
+    <div class="bonus rv">
+      <div class="bonus-art"><img src="assets/bonus-ink.png" alt="" aria-hidden="true"></div>
+      <div>
+        <div class="kicker">Bonus</div>
+        <h3>Special In-Person Meetup no fim de 2027</h3>
+        <p>Depois de um ano inteiro de aulas on-line, a turma se encontra pessoalmente com a Teacher Milla. Conversação ao vivo, celebração do que cada um conquistou e o encerramento oficial da jornada. Só quem fizer parte desta turma estará lá.</p>
+      </div>
+      <span class="deco x" style="right:30px;top:30px"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 5. INVESTIMENTO + FAQ ======================= -->
+<section id="inscricao" class="dark">
+  <div class="secbg" style="background-image:url(assets/bg-eye.jpg)"></div>
+  <canvas class="sparks" aria-hidden="true"></canvas>
+  <span class="deco zig" style="left:3%;top:30%"></span>
+  <span class="deco stripes" style="right:4%;bottom:12%"></span>
+  <img class="neon-ben" src="assets/bigben-neon.png" alt="" aria-hidden="true">
+  <div class="wrap">
+    <div class="center rv">
+      <div class="kicker">Black Friday · Edição 2027</div>
+      <h2 class="title">Sua vaga no <em>English Bloom 27</em></h2>
+      <p class="lead">Primeira edição, turma única de 15 alunos. Quando fechar, a próxima turma só em 2028.</p>
+    </div>
+
+
+    <div class="cmp rv">
+      <div class="cmp-wrap"><table>
+        <thead><tr><th></th><th>Estudar sozinho</th><th>App de idioma</th><th class="hl">English Bloom</th></tr></thead>
+        <tbody>
+          <tr><td>Professora ao vivo</td><td class="n">✕</td><td class="n">✕</td><td class="hl y">✓</td></tr>
+          <tr><td>Alguém corrigindo sua fala</td><td class="n">✕</td><td class="n">✕</td><td class="hl y">✓</td></tr>
+          <tr><td>Turma do seu nível</td><td class="n">✕</td><td class="n">✕</td><td class="hl y">✓</td></tr>
+          <tr><td>Plano de 12 meses</td><td class="n">✕</td><td>Genérico</td><td class="hl y">✓</td></tr>
+          <tr><td>Desafio entre as aulas</td><td class="n">✕</td><td class="y">✓</td><td class="hl y">✓</td></tr>
+          <tr><td>Encontro presencial</td><td class="n">✕</td><td class="n">✕</td><td class="hl y">✓</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+
+    <div class="price-box rv">
+      <div class="price-head">English Bloom 27 · Nível Básico 1</div>
+      <div class="price-body">
+        <div class="price-l">
+          <div class="old">De <s>R$ 297,00</s> por mês</div>
+          <div class="from">por 12 mensalidades de</div>
+          <div class="val"><sup>R$</sup>169<small>,90</small><sub>/mês</sub></div>
+          <div class="off">43% OFF na Black Friday</div>
+          <div class="from">Total no ano: R$ 2.038,80</div>
+          <div class="seats">Só 15 vagas nesse valor</div>
+          <div class="seat-bar" aria-hidden="true"><i></i></div>
+          <div class="seat-note">Quando a turma fecha, o valor volta pra R$ 297</div>
+        </div>
+        <div class="price-r"><ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12l5 5 9-10"/></svg>24 aulas ao vivo com a Teacher Milla</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12l5 5 9-10"/></svg>12 temas em sequência, de janeiro a dezembro</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12l5 5 9-10"/></svg>English Challenges entre as aulas</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12l5 5 9-10"/></svg>Materiais digitais exclusivos</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12l5 5 9-10"/></svg>Comunidade da turma</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12l5 5 9-10"/></svg>Checkpoints de evolução</li>
+          <li class="b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6"><path d="M5 12l5 5 9-10"/></svg>Bônus: encontro presencial no fim de 2027</li>
+        </ul></div>
+      </div>
+      <div class="price-cta">
+        <!-- TROCAR o href pelo link de checkout ou WhatsApp da Milla -->
+        <a class="btn" href="#" data-link="checkout">Garantir minha vaga</a>
+        <small>Você não precisa saber inglês perfeitamente. Precisa querer praticar.</small>
+      </div>
+    </div>
+
+    <div class="faq rv">
+      <details><summary>Serve para mim se eu sei muito pouco de inglês?</summary><p>O programa foi montado para o nível Básico 1. Se você entende palavras soltas e frases simples, mas trava na hora de falar, é exatamente aqui que você começa.</p></details>
+      <details><summary>Quantas aulas são e com que frequência?</summary><p>Duas aulas ao vivo por mês, a cada 15 dias, durante os 12 meses de 2027. São 24 encontros no total.</p></details>
+      <details><summary>E nas semanas sem aula?</summary><p>Você recebe um English Challenge, uma missão curta para manter o contato com o inglês, e tem a comunidade da turma para praticar e tirar dúvidas.</p></details>
+      <details><summary>Em quanto tempo vou ficar fluente?</summary><p>Ninguém sério crava prazo pra fluência, porque depende do quanto você pratica. O que está garantido é a estrutura: aula a cada 15 dias, desafio entre elas e alguém corrigindo você. Quem aparece e faz os desafios percebe a diferença de um mês pro outro.</p></details>
+      <details><summary>Como funciona o encontro presencial?</summary><p>É um bônus exclusivo da turma, no fim de 2027, para praticar conversação ao vivo e celebrar a jornada. Data e local são combinados com a turma ao longo do ano.</p></details>
+    </div>
+
+    <div class="closing rv">
+      <span class="hand">Let's bloom together!</span>
+      <a class="btn" href="#inscricao">Quero entrar na turma
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </div>
+  <span class="deco x" style="left:6%;top:120px"></span>
+  <span class="deco dots" style="right:4%;top:44%"></span>
+</section>
+
+<footer>MS Learnings · English Bloom 27 · Teacher Milla Saso</footer>
+
+<script>
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+
+const calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const fine = matchMedia('(pointer:fine)').matches;
+
+// Ícones dos meses (recortados de uma grade 4x3) e tilt nos cards
+document.querySelectorAll('.month').forEach((m,i)=>{
+  m.style.setProperty('--i',i);
+  const ic=document.createElement('div');ic.className='mi';ic.setAttribute('aria-hidden','true');
+  ic.style.backgroundPosition=`${(i%4)*100/3}% ${Math.floor(i/4)*50}%`;m.prepend(ic);
+  if(fine&&!calm){
+    m.addEventListener('pointermove',e=>{const r=m.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;m.style.transform=`perspective(700px) rotateY(${x*12}deg) rotateX(${-y*12}deg) translateY(-4px)`});
+    m.addEventListener('pointerleave',()=>m.style.transform='');
+  }
+});
+
+// Antes / depois
+const ba=document.getElementById('ba');
+if(ba){const r=ba.querySelector('input');r.addEventListener('input',()=>ba.style.setProperty('--pos',r.value+'%'));}
+
+// Holofote do mouse
+if(fine&&!calm){addEventListener('pointermove',e=>{document.documentElement.style.setProperty('--mx',e.clientX+'px');document.documentElement.style.setProperty('--my',e.clientY+'px')});}
+
+// Botões: reflexo, magnético e faíscas
+document.querySelectorAll('.btn').forEach(b=>{
+  const g=document.createElement('span');g.className='gl';b.prepend(g);
+  if(fine&&!calm){
+    b.addEventListener('pointermove',e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.15}px,${(e.clientY-r.top-r.height/2)*.25}px)`});
+    b.addEventListener('pointerleave',()=>b.style.transform='');
+  }
+  b.addEventListener('click',e=>{
+    if(calm)return;
+    const cols=['#f0509a','#ffd3ea','#b89ad8','#fff'];
+    for(let i=0;i<16;i++){const s=document.createElement('span');s.className='spark';const a=Math.PI*2*i/16,d=40+Math.random()*50;
+      s.style.cssText=`left:${e.clientX}px;top:${e.clientY}px;background:${cols[i%4]};--dx:${Math.cos(a)*d}px;--dy:${Math.sin(a)*d}px`;
+      document.body.appendChild(s);setTimeout(()=>s.remove(),750);}
+  });
+});
+
+// Tilt na foto
+const ring=document.querySelector(".portrait .laptop .screen");
+if(ring&&fine&&!calm){const p=ring.parentElement;
+  p.addEventListener('pointermove',e=>{const r=p.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;ring.style.transform=`perspective(800px) rotateY(${x*14}deg) rotateX(${-y*14}deg)`});
+  p.addEventListener('pointerleave',()=>ring.style.transform='');}
+
+// Partículas em todas as seções
+if(!calm){document.querySelectorAll('canvas.sparks').forEach(cv=>{
+  const c=cv.getContext('2d');let W,H;const P=[];
+  const light=cv.closest('.light');
+  const cols=light?['214,60,134','138,99,184','240,80,154']:['240,80,154','184,154,216','255,211,234'];
+  const fit=()=>{W=cv.width=cv.offsetWidth*devicePixelRatio;H=cv.height=cv.offsetHeight*devicePixelRatio};fit();addEventListener('resize',fit);
+  for(let i=0;i<50;i++)P.push({x:Math.random(),y:Math.random(),r:Math.random()*1.8+.4,v:Math.random()*.0005+.00015,c:cols[i%3],t:Math.random()*6});
+  let vis=false;new IntersectionObserver(e=>vis=e[0].isIntersecting).observe(cv);
+  (function loop(){if(vis){c.clearRect(0,0,W,H);P.forEach(p=>{p.y-=p.v;p.t+=.02;if(p.y<0){p.y=1;p.x=Math.random()}
+    const a=(light?.25:.35)+.3*Math.sin(p.t);c.beginPath();c.arc(p.x*W+Math.sin(p.t)*8,p.y*H,p.r*devicePixelRatio,0,7);c.fillStyle=`rgba(${p.c},${a})`;c.shadowBlur=light?0:8;c.shadowColor=`rgba(${p.c},1)`;c.fill()})}
+    requestAnimationFrame(loop)})();
+});}
+
+// Contador da Black Friday (TROCAR a data se o fim da oferta for outro)
+const BF_END=new Date('2026-11-30T23:59:59-03:00');
+const bar=document.getElementById('topbar'),tb=document.querySelectorAll('#tbcd b');
+function tick(){const d=Math.max(0,BF_END-new Date());
+  if(!d){bar.classList.add('over');bar.querySelector('.msg').lastChild.textContent='Últimas vagas da turma 2027';return}
+  [Math.floor(d/864e5),Math.floor(d/36e5)%24,Math.floor(d/6e4)%60,Math.floor(d/1e3)%60].forEach((n,i)=>{const t=String(Math.min(n,99)).padStart(2,'0');if(tb[i].textContent!==t)tb[i].textContent=t})}
+tick();setInterval(tick,1000);
+
+// Passos: destaca o que está sob o mouse
+document.querySelectorAll('.steps li').forEach(li=>li.addEventListener('pointerenter',()=>{document.querySelectorAll('.steps li').forEach(x=>x.classList.remove('on'));li.classList.add('on')}));
+</script>
+</body>
+</html>
